@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugünün Kalbi</title>
+    <style>
+        /* CSS Kodları */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffe4e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: #ff6b6b;
+            position: relative;
+            transform: rotate(-45deg);
+            margin: 0 auto 20px;
+            animation: heartbeat 1s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(-45deg);
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #d35400;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <h1>Bugünün Kalbi 💖</h1>
+        <p>Sen benim en güzel günüm, en tatlı anımsın.</p>
+        <p>Her kalp atışımda, sana olan sevgim artıyor iyi ki hayatımdasın. 💕</p>
+        <footer>❤️ Seninle, her şey daha güzel.</footer>
+    </div>
+</body>
+</html>
